@@ -2,12 +2,17 @@
 <head>
   <title>Headlines</title>
 </head>
+<form>
+	<input type="text" name="publication" placeholder="search" />
+	<input type="submit" value="Submit" />
+</form>
+
 <body>
   <h1>Headlines</h1>
-  {% for article in articles %}
-  <b><a href="{{article.link}}" target="_blank">{{article.title}}</a></b><br />
-  <i>{{article.published}}</i><br />
-  <p>{{article.summary}}</p>
+  {% for news in articles %}
+  <b><a href="{{news.link}}" target="_blank">{{news.title}}</a></b><br />
+  <i>{{news.published}}</i><br />
+  <p>{{news.summary}}</p>
   <hr />
   {% endfor %}
 
